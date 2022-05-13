@@ -1,0 +1,106 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{statcourse}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cite}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[breaklinks=true,bookmarks=false]{hyperref}
+\statcoursefinalcopy
+\setcounter{page}{1}
+\begin{document}
+
+\title{\LaTeX\ Template for SBE304 Project Proposal}
+
+\author{Mohammed El-Sayed\\
+{\tt\small mohammed.elraoof98@eng-st.cu.edu.eg}
+\and
+Esraa Sayed\\
+{\tt\small esraa.sayed98@eng-st.cu.edu.eg}
+\and
+Galal Hossam\\
+{\tt\small galalhossam555@gmail.com}
+\and
+Zeinab Walid\\
+{\tt\small zeinab.anwer97@eng-st.cu.edu.eg}
+}
+
+\maketitle
+
+
+\section{Motivation}
+
+We are eager to enter the field of Bioinformatics as it is the only connection between Biomedical Engineering and the future of Machine Learning, so we searched for a topic that relates the Cancer disease with the gene expression. as this topic is very important for patients suffering from this dangerous disease.
+We are looking forward to detecting the type of cancer disease depending on the spectrum of genomic alterations that promote oncogenesis, origin of cancer cell and location. 
+
+
+\section{Project objectives}
+
+
+Our main objective in this project is to reach to the best performance out of this dataset as we face a great challenge in preprocessing stage as we have too much data and we tried to select the best of it to reach to the best output in classifying different types of cancer disease. and we have to choose the best model that visualize this data , so we will use different models and select the model that obtain the best performance. 
+
+\section{Data}
+
+
+	We use dataset for our project depending on this paper:\href{http://archive.ics.uci.edu/ml/machine-learning-databases/00401/TCGA-PANCAN-HiSeq-801x20531.tar.gz}{The Cancer Genome Atlas Pan-Cancer analysis project}
+	\cite{weinstein2013cancer}
+	
+\section{preprocessing}
+
+
+1- Feature Selection : we will use a method like T testing to select the best features with the highest significant level $p_value<= 0.05$ , as T testing works on two classes only , so we search for another method that fit with 5 classes like Anova filter based approach that select the features that give the best performance. 
+Our features can not be selected simply without a model dependeing on a method like p-value.\\
+2- Feature normalization : the values of our dataset are near from each other so we don't need to make feature scaling, as feature normalization is important to make data near to each other to get the best performance.\\
+3- Data imputation: we have no missing data.\\
+
+\section{Exploratory data analysis (EDA)}
+
+
+we work on large data with more than 20,000 which is a challenge for us now to visualize these massive data , so we trying to find the best way to select the best features ,then use the selected features to visualize our data.
+Each model has its own way of visualization ,so we will visualize upon the models we chose.
+There are different methods to visualize data depending on different methods.
+
+\section{Methodology}
+
+
+we will try to use these 4  methods  and make a comparison  between them to select the best compatible one to our data set:
+\begin{itemize}
+	\item Decision Trees: it is easy to interpret and explain which is suitable for our dataset.
+	\item Logistic regression: it is a useful method as you don't have to worry as much about features being correlated. 
+	\item K-nearest neighbors (KNN) model:it is very simple in implementation , and classes don't have to be linearly separable.	
+	\item Naive Bayes (NB) Classier (or Gaussian NB Classifier): it is a simple model that perform very well.
+\end{itemize}
+
+\section{Timetable}
+
+
+ We want that all of us study all the models to get more familiar with these models and to get the most benefit from the project.
+\begin{itemize}
+	\item Week 1: Preprocessing and split data into training set and testing set.
+	\item Week 2 : Decision tree and Logistic regression models - Updating our websites.
+	\item Week 3 : K-nearest neighbors (KNN) model and Naive Bayes (NB) Classier (or Gaussian NB Classifier)- Updating our websites
+	\item Week 4 :Select the best model.
+\end{itemize}
+
+\section{Personal Websites}\begin{itemize}
+\item \href{http://mohammedelsayed412.github.io/}{Mohammed El-Sayed}
+\item \href{https://esraasayed98.github.io/EsraaSayed.github.io/}{Esraa Sayed}
+\item \href{https://galal-hossam-eldien.github.io/Galal-Hosam-Eldien/}{Galal Hossam}
+\item \href{https://zeinabwalid.github.io/}{Zeinab Walid}
+\end{itemize}
+
+
+{\small
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
+}
+
+\end{document}
